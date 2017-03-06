@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<h1>Projects</h1>
+ {{#each projects as |project|}}
+ <div class="project">
+   <div class="project-name">
+     <a href="/projects/{{project.name}}">
+       {{project.name}}
+     </a>
+   </div>
+   <div class="project-techs">
+     {{#each project.tech as |tech|}}
+     <div class="project-tech">
+       {{tech}}
+     </div>
+     {{/each}}
+   </div>
+     <div class="project-gitLinks">
+       {{#each project.gitLinks as |gitLink|}}
+       <div class="project-gitLink">
+         {{gitLink}}
+       </div>
+       {{/each}}
+     </div>
+       <div class="projec-screenshots">
+         {{#each project.screenshots as |screenshot|}}
+         <div class="project-screenshot">
+           {{screenshot}}
+         </div>
+         {{/each}}
+       </div>
+     </div>
+     {{/each}}
